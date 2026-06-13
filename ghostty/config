@@ -1,0 +1,152 @@
+theme = dark:Catppuccin Frappe,light:Catppuccin Latte
+
+background-opacity = 0.85
+background-blur = 20
+
+
+# Background image for the terminal.
+#
+# This should be a path to a PNG or JPEG file, other image formats are
+# not yet supported.
+#
+# The background image is currently per-terminal, not per-window. If
+# you are a heavy split user, the background image will be repeated across
+# splits. A future improvement to Ghostty will address this.
+#
+# WARNING: Background images are currently duplicated in VRAM per-terminal.
+# For sufficiently large images, this could lead to a large increase in
+# memory usage (specifically VRAM usage). A future Ghostty improvement
+# will resolve this by sharing image textures across terminals.
+#
+# Available since: 1.2.0
+background-image = ~/.sirius1pro/hex2_3840x1600.jpg
+
+# Background image opacity.
+#
+# This is relative to the value of `background-opacity`.
+#
+# A value of `1.0` (the default) will result in the background image being
+# placed on top of the general background color, and then the combined result
+# will be adjusted to the opacity specified by `background-opacity`.
+#
+# A value less than `1.0` will result in the background image being mixed
+# with the general background color before the combined result is adjusted
+# to the configured `background-opacity`.
+#
+# A value greater than `1.0` will result in the background image having a
+# higher opacity than the general background color. For instance, if the
+# configured `background-opacity` is `0.5` and `background-image-opacity`
+# is set to `1.5`, then the final opacity of the background image will be
+# `0.5 * 1.5 = 0.75`.
+#
+# Available since: 1.2.0
+background-image-opacity = 0.85
+
+# Background image position.
+#
+# Valid values are:
+#   * `top-left`
+#   * `top-center`
+#   * `top-right`
+#   * `center-left`
+#   * `center`
+#   * `center-right`
+#   * `bottom-left`
+#   * `bottom-center`
+#   * `bottom-right`
+#
+# The default value is `center`.
+#
+# Available since: 1.2.0
+background-image-position = center
+
+# Background image fit.
+#
+# Valid values are:
+#
+#  * `contain`
+#
+#    Preserving the aspect ratio, scale the background image to the largest
+#    size that can still be contained within the terminal, so that the whole
+#    image is visible.
+#
+#  * `cover`
+#
+#    Preserving the aspect ratio, scale the background image to the smallest
+#    size that can completely cover the terminal. This may result in one or
+#    more edges of the image being clipped by the edge of the terminal.
+#
+#  * `stretch`
+#
+#    Stretch the background image to the full size of the terminal, without
+#    preserving the aspect ratio.
+#
+#  * `none`
+#
+#    Don't scale the background image.
+#
+# The default value is `contain`.
+#
+# Available since: 1.2.0
+background-image-fit = cover
+
+# Whether to repeat the background image or not.
+#
+# If this is set to true, the background image will be repeated if there
+# would otherwise be blank space around it because it doesn't completely
+# fill the terminal area.
+#
+# The default value is `false`.
+#
+# Available since: 1.2.0
+background-image-repeat = false
+
+font-family = "MesloLGS NF"
+font-size = 14
+
+macos-titlebar-style = transparent
+window-padding-x = 8
+window-padding-y = 4
+window-padding-color = extend
+
+macos-non-native-fullscreen = false
+
+window-width = 220
+window-height = 50
+window-save-state = always
+
+# Создание сплитов
+keybind = ctrl+super+right=new_split:right
+keybind = ctrl+super+down=new_split:down
+keybind = ctrl+super+left=new_split:left
+keybind = ctrl+super+up=new_split:up
+
+# Навигация между сплитами
+keybind = alt+super+right=goto_split:right
+keybind = alt+super+down=goto_split:bottom
+keybind = alt+super+left=goto_split:left
+keybind = alt+super+up=goto_split:top
+unfocused-split-opacity = 0.5
+split-divider-color = #3a3b40
+
+shell-integration-features = cursor,sudo,title,ssh-env,ssh-terminfo
+
+# Спрашивать перед закрытием окна с активным процессом
+confirm-close-surface = true
+
+# Прятать курсор мыши при наборе текста
+mouse-hide-while-typing = true
+
+# Защита от случайной вставки опасных команд
+clipboard-paste-protection = true
+
+# Обрезать пробелы в конце при копировании
+clipboard-trim-trailing-spaces = true
+
+# Option = Alt (для тех, кто использует Alt-комбинации в vim/tmux)
+macos-option-as-alt = true
+
+# Курсор
+cursor-style = bar
+#cursor-style-blink = false
+

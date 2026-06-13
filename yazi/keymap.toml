@@ -1,0 +1,10 @@
+[mgr]
+prepend_keymap = [
+  # Quick directory jumps
+  { on = ["g", "P"], run = "cd ~/Projects", desc = "Go to Projects" },
+  { on = ["g", "p"], run = "cd ~/Pictures", desc = "Go to Pictures" },
+  # Open lazygit
+  { on = ["<C-g>"], run = "shell 'lazygit' --block", desc = "Open lazygit" },
+  { on = ["e"], run = "shell 'nvim %h' --block", desc = "Edit file with Neovim" },
+  { on = ["h"], run = "shell 'hexyl --border=none %h | less' --block", desc = "View binary file with hexyl" }
+]

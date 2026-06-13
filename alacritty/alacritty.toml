@@ -1,0 +1,277 @@
+# This section documents the [general] table of the configuration file.
+[general]
+
+# Import additional configuration files.
+import = [
+# Themes collection installation:
+#    git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty-theme
+#  "~/.config/alacritty-theme/themes/catppuccin_mocha.toml"
+#  "~/.config/alacritty-theme/themes/catppuccin_latte.toml"
+  "~/.config/alacritty-theme/themes/ayu_dark.toml"
+#  "~/.config/alacritty-theme/themes/ayu_light.toml"
+]
+
+# This section documents the [window] table of the configuration file.
+[window]
+
+# dimensions = { columns = <integer>, lines = <integer> }
+#
+# Window dimensions (changes require restart).
+#
+# Number of lines/columns (not pixels) in the terminal. Both lines and columns must be non-zero for this to take effect. The number of columns must be at least 2, while using a value of 0 for columns and lines will fall back to the window manager's recommended size
+#
+# Default: { columns = 0, lines = 0 }
+dimensions = { columns = 220, lines = 60 }
+
+# padding = { x = <integer>, y = <integer> }
+#
+# Blank space added around the window in pixels. This padding is scaled by DPI and the specified value is always added at both opposing sides.
+#
+# Default: { x = 0, y = 0 }
+padding = { x = 5, y = 5 }
+
+# dynamic_padding = true | false
+#
+# Spread additional padding evenly around the terminal content.
+#
+# Default: false
+dynamic_padding = true
+
+# decorations = "Full" | "None" | "Transparent" | "Buttonless"
+#
+# Window decorations.
+#
+# Full
+#     Borders and title bar.
+# None
+#     Neither borders nor title bar.
+# Transparent (macOS only)
+#     Title bar, transparent background and title bar buttons.
+# Buttonless (macOS only)
+#     Title bar, transparent background and no title bar buttons.
+#
+# Default: "Full"
+# decorations = "Transparent"
+
+# opacity = <float>
+#
+# Background opacity as a floating point number from 0.0 to 1.0. The value 0.0 is completely transparent and 1.0 is opaque.
+#
+# Default: 1.0
+opacity = 0.65
+
+# blur = true | false # (works on macOS/KDE Wayland)
+#
+# Request compositor to blur content behind transparent windows.
+#
+# Default: false
+blur = true
+
+# startup_mode = "Windowed" | "Maximized" | "Fullscreen" | "SimpleFullscreen"
+#
+# Startup mode (changes require restart)
+#
+# Windowed
+#     Regular window.
+# Maximized
+#     The window will be maximized on startup.
+# Fullscreen
+#     The window will be fullscreened on startup.
+# SimpleFullscreen (macOS only)
+#     Same as Fullscreen, but you can stack windows on top.
+#
+# Default: "Windowed"
+startup_mode = "Windowed"
+
+# dynamic_title = true | false
+#
+# Allow terminal applications to change Alacritty's window title.
+#
+# Default: true
+dynamic_title = true
+
+# resize_increments = true | false # (works on macOS/X11/Wayland)
+#
+# Prefer resizing window by discrete steps equal to cell dimensions.
+#
+# Default: false
+resize_increments = true
+
+# option_as_alt = "OnlyLeft" | "OnlyRight" | "Both" | "None" # (macOS only)
+#
+# Make Option key behave as Alt.
+# 
+# Default: "None"
+option_as_alt = "Both"
+
+# level = "Normal" | "AlwaysOnTop"
+#
+# Sets window level.
+#
+# Normal
+#   Window adheres to system's default z-order.
+# AlwaysOnTop
+#   Window is a toplevel window.
+#
+#Default: "Normal"
+# level = "AlwaysOnTop"
+
+# This section documents the [scrolling] table of the configuration file.
+[scrolling]
+
+# history = <integer>
+#
+# Maximum number of lines in the scrollback buffer.
+# Specifying 0 will disable scrolling.
+# Limited to 100000.
+#
+# Default: 10000
+history = 100000
+
+# multiplier = <integer>
+#
+# Number of line scrolled for every input scroll increment.
+#
+# Default: 3
+multiplier = 3
+
+# This section documents the [font] table of the configuration file.
+[font]
+
+# normal = { family = "<string>", style = "<string>" }
+#
+# Default:
+#
+# Linux/BSD: { family = "monospace", style = "Regular" }
+# Windows: { family = "Consolas", style = "Regular" }
+# macOS: { family = "Menlo", style = "Regular" }
+
+normal = { family = "MesloLGS NF", style = "Regular" } 
+
+# size = <float>
+#
+# Font size in points.
+#
+# Default: 11.25
+size = 14
+
+# Для лучшей поддержи прозрачности в vim и тп
+[colors]
+
+# transparent_background_colors = true | false
+#
+# Whether or not window.opacity applies to all cell backgrounds, or only to the default background. When set to true all cells will be transparent regardless of their background color.
+# 
+# Default: false
+transparent_background_colors = true
+
+# draw_bold_text_with_bright_colors = true | false
+#
+# When true, bold text is drawn using the bright color variants.
+#
+# Default: false
+draw_bold_text_with_bright_colors = true
+
+# This section documents the [cursor] table of the configuration file.
+[cursor]
+
+# style = { shape = "<shape>", blinking = "<blinking>" }
+#
+# shape = "Block" | "Underline" | "Beam"
+#
+# Default: "Block"
+
+# blinking = "Never" | "Off" | "On" | "Always"
+#
+# Never
+#     Prevent the cursor from ever blinking
+# Off
+#     Disable blinking by default
+# On
+#     Enable blinking by default
+# Always
+#     Force the cursor to always blink
+#
+# Default: "Off"
+style =  { shape = "Block", blinking = "On" }
+
+# vi_mode_style = { <shape>, <blinking> } | "None"
+#
+# If the vi mode cursor style is "None" or not specified, it will fall back to the active value of the normal cursor.
+#
+# Default: "None"
+
+# blink_interval = <integer>
+#
+# Cursor blinking interval in milliseconds.
+#
+# Default: 750
+
+# blink_timeout = <integer>
+#
+# Time after which cursor stops blinking, in seconds.
+#
+# Specifying 0 will disable timeout for blinking.
+#
+# Default: 5
+
+# unfocused_hollow = true | false
+#
+# When this is true, the cursor will be rendered as a hollow box when the window is not focused.
+#
+# Default: true
+
+# thickness = <float>
+#
+# Thickness of the cursor relative to the cell width as floating point number from 0.0 to 1.0.
+#
+# Default: 0.15
+
+# This section documents the [terminal] table of the configuration file.
+[terminal]
+
+# shell = "<string>" | { program = "<string>", args = ["<string>",] }
+#
+# You can set shell.program to the path of your favorite shell, e.g. /bin/zsh. Entries in shell.args are passed as arguments to the shell.
+#
+# Default:
+#
+# Linux/BSD/macOS: $SHELL or the user's login shell, if $SHELL is unset
+# Windows: "powershell"
+#
+# Example:
+#
+# shell = { program = "/bin/zsh", args = ["-l"] }
+
+# This section documents the [mouse] table of the configuration file.
+[mouse]
+
+# hide_when_typing = true | false
+#
+# When this is true, the cursor is temporarily hidden when typing.
+#
+# Default: false
+hide_when_typing = true
+
+# bindings = [{ <mouse>, <mods>, <mode>, <command> | <chars> | <action> },]
+#
+# See keyboard.bindings for full documentation on mods, mode, command, chars, and action.
+#
+# When an application running within Alacritty captures the mouse, the `Shift` modifier can be used to suppress mouse reporting. If no action is found for the event, actions for the event without the `Shift` modifier are triggered instead.
+#
+# mouse = "Middle" | "Left" | "Right" | "Back" | "Forward" | "WheelUp" | "WheelDown" | <integer>
+#
+# Mouse button which needs to be pressed to trigger this binding.
+#
+# action = <keyboard.bindings.action> | "ExpandSelection"
+#
+# ExpandSelection
+#
+# Expand the selection to the current mouse cursor location.
+#
+# Example:
+#
+# [mouse]
+# bindings = [
+# { mouse = "Right", mods = "Control", action = "Paste" },
+# ]
