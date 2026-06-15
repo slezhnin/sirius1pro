@@ -348,7 +348,7 @@
     "Green Component" : 0.23660069704055786
   },
   "Name" : "sirius1pro",
-  "Transparency" : 0.19751602564102563,
+  "Transparency" : 0.15,
   "Horizontal Spacing" : 1,
   "Cursor Color (Dark)" : {
     "Red Component" : 1,
@@ -460,7 +460,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.78105825185775757
   },
-  "Non Ascii Font" : "Monaco 12",
+  "Non Ascii Font" : "MesloLGS-NF-Regular 14",
   "Ansi 6 Color (Dark)" : {
     "Red Component" : 0.20392157137393951,
     "Color Space" : "sRGB",
@@ -477,7 +477,7 @@
   },
   "Title Components" : 512,
   "Custom Directory" : "No",
-  "Working Directory" : "\/Users\/sirius1",
+  "Working Directory" : "~",
   "ASCII Anti Aliased" : true,
   "Shortcut" : "",
   "Mouse Reporting" : true,
@@ -499,7 +499,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.98600882291793823
   },
-  "Background Image Location" : "\/Users\/sirius1\/sirius1pro\/hex_3840x1600.jpg",
+  "Background Image Location" : "~/sirius1pro/hex_3840x1600.jpg",
   "Ansi 1 Color (Light)" : {
     "Red Component" : 0.7074432373046875,
     "Color Space" : "sRGB",
