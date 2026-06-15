@@ -23,7 +23,17 @@ Configuration files for various cli tools.
 ## Install via brew
 
 ```sh
-brew install lazygit yazi eza bat fzf btop dust ripgrep git-delta glow hexyl zellij tmux gitmux tmuxai
+brew install lazygit yazi eza bat fzf btop dust ripgrep git-delta glow hexyl zellij tmux gitmux tmuxai chafa
+```
+
+## Graphic tools
+
+- `chafa` - ascii art image preview
+- `poppler` - pdf viewer
+- `ueberzugpp` - image viewer
+
+```sh
+brew install chafa poppler jstkdng/programs/ueberzugpp
 ```
 
 ## Git Delta Config
